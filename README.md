@@ -22,44 +22,44 @@ The Automation Testing repository serves as a centralized hub for all the automa
 Automation in testing refers to the use of specialized software tools to execute pre-scripted tests on a software application before it is released into production. The primary goal of automation in testing is to increase efficiency, accuracy, and coverage of the testing process. By automating repetitive and time-consuming test cases, testers can focus on more complex testing activities, such as exploratory testing and user experience assessments. Automated tests can be run frequently and consistently, ensuring that new code changes do not introduce defects into the existing functionality, ultimately enhancing the overall quality and reliability of the software.
 
 ## Advantages
-**1. Efficiency and Speed:**
+**1. Efficiency and Speed**
 
 Automated tests can be executed much faster than manual tests, significantly reducing the time required for testing cycles.
 
-**2. Consistency and Repeatability:**
+**2. Consistency and Repeatability**
 
 Automated tests provide consistent results and can be repeated multiple times with the same precision, eliminating human error.
 
-**3. Coverage:**
+**3. Coverage**
 
 Automation allows for a broader range of tests to be executed, including complex test cases that might be time-consuming or impractical to perform manually.
 
-**4. Cost-Effective in the Long Run:**
+**4. Cost-Effective in the Long Run**
 
 Though the initial setup costs for automation tools and scripts can be high, the long-term savings in time and resources make it cost-effective.
 
-**5. Continuous Integration and Continuous Deployment (CI/CD):**
+**5. Continuous Integration and Continuous Deployment (CI/CD)**
 
 Automation is essential for CI/CD pipelines, enabling frequent and reliable software releases with automated regression testing.
 
 ## Disadvantages
-**1. Initial Setup Costs:**
+**1. Initial Setup Costs**
 
 The initial investment in automation tools, infrastructure, and training can be substantial.
 
-**2. Maintenance:**
+**2. Maintenance**
 
 Automated test scripts require regular maintenance and updates to keep up with changes in the application under test.
 
-**3. Complexity:**
+**3. Complexity**
 
 Writing and managing automated tests can be complex, especially for dynamic and frequently changing applications.
 
-**4. Limited to Pre-scripted Scenarios:**
+**4. Limited to Pre-scripted Scenarios**
 
 Automated tests are based on predefined scripts and cannot handle unexpected behaviors or exploratory testing scenarios effectively.
 
-**5. Not Suitable for All Types of Testing:**
+**5. Not Suitable for All Types of Testing**
 
 Certain tests, such as those requiring human judgment or user experience evaluations, are difficult or impossible to automate effectively.
 
