@@ -10,7 +10,7 @@
 - [Contribute to the Repository](#contribute-to-the-repository)
 
 ## Introduction
-Welcome to the Automation Testing repository! This project is designed to help developers and QA engineers automate their testing processes using [specific tool/framework]. By automating tests, we aim to increase efficiency, ensure consistent test execution, and improve the overall quality of our software.
+Welcome to the Automation Testing repository! This project is designed to help developers and QA engineers automate their testing processes using Cypress. By automating tests, we aim to increase efficiency, ensure consistent test execution, and improve the overall quality of our software.
 
 ## Contributors👨
 1. Muhammad Hammad Rashid
