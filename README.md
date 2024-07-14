@@ -7,6 +7,8 @@
 - [Automation](#automation)
 - [Advantages](#advantages)
 - [Disadvantages](#disadvantages)
+- [Projects](#projects)
+  - [Project 1](#project-1)
 - [Contribute to the Repository](#contribute-to-the-repository)
 
 ## Introduction
@@ -62,6 +64,10 @@ Automated tests are based on predefined scripts and cannot handle unexpected beh
 **5. Not Suitable for All Types of Testing**
 
 Certain tests, such as those requiring human judgment or user experience evaluations, are difficult or impossible to automate effectively.
+
+## Projects
+
+### Project 1
 
 ## Contribute to the Repository
 Reach out to me via my email address [Email Address](mailto:hammadrashid2001@gmail.com) and we can further discuss on making this repository a better source for the people.
