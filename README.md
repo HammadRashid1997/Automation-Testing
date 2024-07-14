@@ -8,7 +8,7 @@
 - [Advantages](#advantages)
 - [Disadvantages](#disadvantages)
 - [Projects](#projects)
-  - [Project 1](#project-1)
+  - [Portfolio](#portfolio)
 - [Contribute to the Repository](#contribute-to-the-repository)
 
 ## Introduction
@@ -66,8 +66,9 @@ Automated tests are based on predefined scripts and cannot handle unexpected beh
 Certain tests, such as those requiring human judgment or user experience evaluations, are difficult or impossible to automate effectively.
 
 ## Projects
+This section provides a comprehensive overview of the projects on which I have performed automation testing using Cypress.
 
-### Project 1
+### Portfolio
 
 ## Contribute to the Repository
 Reach out to me via my email address [Email Address](mailto:hammadrashid2001@gmail.com) and we can further discuss on making this repository a better source for the people.
