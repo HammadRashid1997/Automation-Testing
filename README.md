@@ -79,6 +79,8 @@ This project is my personal portfolio. You can view the complete webiste here. [
 
 ### Husky
 
+You can view the E2E Cypress code. [Husky E2E Cypress Code](https://github.com/HammadRashid1997/Automation-Testing/blob/main/Husky)
+
 ### Fertilize Ai
 
 ## Contribute to the Repository
