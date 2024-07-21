@@ -83,6 +83,8 @@ You can view the E2E Cypress code. [Husky E2E Cypress Code](https://github.com/H
 
 ### Fertilize Ai
 
+You can view the E2E Cypress code here. [E2E Cypress Code](https://github.com/HammadRashid1997/Automation-Testing/blob/main/Fertilize-Ai)
+
 ## Contribute to the Repository
 Reach out to me via my email address [Email Address](mailto:hammadrashid2001@gmail.com) and we can further discuss on making this repository a better source for the people.
 
