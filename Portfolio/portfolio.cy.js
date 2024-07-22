@@ -423,6 +423,91 @@ describe('Personal Portfolio', () => {
           .should('have.css', 'color', 'rgb(105, 90, 166)')
       })
     })
+
+    context('Skillset', () => {
+      it('The skillsets are visible', () => {
+        cy.get('#services .container.text-center .row').should('be.visible')
+      })
+
+      context('Row 1', () => {
+
+      })
+    })
+  })
+
+  // COntact Us section
+  context('Contact Us', () => {
+    it('The section is visible', () => {
+      cy.get('.section-sm.bg-primary').should('be.visible')
+    })
+
+    it('The section has the correct background color', () => {
+      cy.get('.section-sm.bg-primary').should('be.visible')
+        .should('have.css', 'background-color', 'rgb(105,90,166)')
+    })
+
+    context('Text', () => {
+      it('The text is visible', () => {
+        cy.get('.section-sm.bg-primary .col-sm.offset-md-1.mb-4.mb-md-0').should('be.visible')
+      })
+
+      it('The text title is correct', () => {
+        cy.get('.section-sm.bg-primary .col-sm.offset-md-1.mb-4.mb-md-0 .title .text-light').should('be.visible')
+          .should('have.text', 'Want to work with me?'
+          )
+      })
+
+      it('The text has the correct color', () => {
+        cy.get('.section-sm.bg-primary .col-sm.offset-md-1.mb-4.mb-md-0 .title .text-light').should('be.visible')
+          .should('have.css', 'color', 'rgb(248,249,250)')
+      })
+
+      it('The subtitle text is correct', () => {
+        cy.get('.section-sm.bg-primary .col-sm.offset-md-1.mb-4.mb-md-0 .m-0.text-light').should('be.visible')
+          .should('have.text', 'Feel free to Contact & Hire me')
+      })
+
+      it('The subtitle text has the correct color', () => {
+        cy.get('.section-sm.bg-primary .col-sm.offset-md-1.mb-4.mb-md-0 .m-0.text-light').should('be.visible')
+          .should('have.css', 'color', 'rgb(248,249,250)')
+      })
+    })
+
+    context('Button', () => {
+      it('The button is visible', () => {
+        cy.get('.row.align-items-center .col-sm.offset-sm-2.offset-md-3 .btn.btn-lg.my-font.btn-light.rounded')
+          .should('be.visible')
+      })
+
+      it('The button has the correct background color', () => {
+        cy.get('.row.align-items-center .col-sm.offset-sm-2.offset-md-3 .btn.btn-lg.my-font.btn-light.rounded')
+          .should('be.visible')
+          .should('have.css', 'color', 'rgb(248,249,250)')
+      })
+
+      it('The button has the correct text', () => {
+        cy.get('.row.align-items-center .col-sm.offset-sm-2.offset-md-3 .btn.btn-lg.my-font.btn-light.rounded')
+          .should('be.visible')
+          .should('have.text', 'Hire Me')
+      })
+
+      it('The button text has the correct color', () => {
+        cy.get('.row.align-items-center .col-sm.offset-sm-2.offset-md-3 .btn.btn-lg.my-font.btn-light.rounded')
+          .should('be.visible')
+          .should('have.css', 'color', 'rgb(105,90,166)')
+      })
+
+      it('The button is clickable', () => {
+        cy.get('.row.align-items-center .col-sm.offset-sm-2.offset-md-3 .btn.btn-lg.my-font.btn-light.rounded')
+          .should('be.visible').click()
+      })
+
+      it('When the button is clicked takes the user to the contact section', () => {
+        cy.get('.row.align-items-center .col-sm.offset-sm-2.offset-md-3 .btn.btn-lg.my-font.btn-light.rounded')
+          .should('be.visible').click()
+
+        cy.get('#contact').should('be.visible')
+      })
+    })
   })
 })
-
