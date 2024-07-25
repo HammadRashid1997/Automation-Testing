@@ -435,7 +435,7 @@ describe('Personal Portfolio', () => {
     })
   })
 
-  // COntact Us section
+  // Contact Us section
   context('Contact Us', () => {
     it('The section is visible', () => {
       cy.get('.section-sm.bg-primary').should('be.visible')
@@ -443,7 +443,7 @@ describe('Personal Portfolio', () => {
 
     it('The section has the correct background color', () => {
       cy.get('.section-sm.bg-primary').should('be.visible')
-        .should('have.css', 'background-color', 'rgb(105,90,166)')
+        .should('have.css', 'background-color', 'rgb(105, 90, 166)')
     })
 
     context('Text', () => {
@@ -452,24 +452,23 @@ describe('Personal Portfolio', () => {
       })
 
       it('The text title is correct', () => {
-        cy.get('.section-sm.bg-primary .col-sm.offset-md-1.mb-4.mb-md-0 .title .text-light').should('be.visible')
-          .should('have.text', 'Want to work with me?'
-          )
+        cy.xpath('/html/body/section[4]/div/div/div[1]/h6').should('be.visible')
+          .should('have.text', 'Want to work with me?')
       })
 
       it('The text has the correct color', () => {
-        cy.get('.section-sm.bg-primary .col-sm.offset-md-1.mb-4.mb-md-0 .title .text-light').should('be.visible')
-          .should('have.css', 'color', 'rgb(248,249,250)')
+        cy.xpath('/html/body/section[4]/div/div/div[1]/h6').should('be.visible')
+          .should('have.css', 'color', 'rgb(248, 249, 250)')
       })
 
       it('The subtitle text is correct', () => {
-        cy.get('.section-sm.bg-primary .col-sm.offset-md-1.mb-4.mb-md-0 .m-0.text-light').should('be.visible')
+        cy.xpath('/html/body/section[4]/div/div/div[1]/p').should('be.visible')
           .should('have.text', 'Feel free to Contact & Hire me')
       })
 
       it('The subtitle text has the correct color', () => {
-        cy.get('.section-sm.bg-primary .col-sm.offset-md-1.mb-4.mb-md-0 .m-0.text-light').should('be.visible')
-          .should('have.css', 'color', 'rgb(248,249,250)')
+        cy.xpath('/html/body/section[4]/div/div/div[1]/p').should('be.visible')
+          .should('have.css', 'color', 'rgb(248, 249, 250)')
       })
     })
 
@@ -482,32 +481,106 @@ describe('Personal Portfolio', () => {
       it('The button has the correct background color', () => {
         cy.get('.row.align-items-center .col-sm.offset-sm-2.offset-md-3 .btn.btn-lg.my-font.btn-light.rounded')
           .should('be.visible')
-          .should('have.css', 'color', 'rgb(248,249,250)')
+          .should('have.css', 'color', 'rgb(33, 37, 41)')
       })
 
       it('The button has the correct text', () => {
         cy.get('.row.align-items-center .col-sm.offset-sm-2.offset-md-3 .btn.btn-lg.my-font.btn-light.rounded')
           .should('be.visible')
-          .should('have.text', 'Hire Me')
+          .contains('Hire Me')
       })
 
       it('The button text has the correct color', () => {
-        cy.get('.row.align-items-center .col-sm.offset-sm-2.offset-md-3 .btn.btn-lg.my-font.btn-light.rounded')
+        cy.xpath('/html/body/section[4]/div/div/div[2]/button')
           .should('be.visible')
-          .should('have.css', 'color', 'rgb(105,90,166)')
+          .should('have.css', 'color', 'rgb(33, 37, 41)')
       })
 
       it('The button is clickable', () => {
-        cy.get('.row.align-items-center .col-sm.offset-sm-2.offset-md-3 .btn.btn-lg.my-font.btn-light.rounded')
+        cy.xpath('/html/body/section[4]/div/div/div[2]/button')
           .should('be.visible').click()
       })
 
       it('When the button is clicked takes the user to the contact section', () => {
-        cy.get('.row.align-items-center .col-sm.offset-sm-2.offset-md-3 .btn.btn-lg.my-font.btn-light.rounded')
+        cy.xpath('/html/body/section[4]/div/div/div[2]/button')
           .should('be.visible').click()
 
         cy.get('#contact').should('be.visible')
       })
+    })
+  })
+
+  // Languages section
+
+  // Tools and frameworks section
+
+  // Certifications section
+
+  // Blogs section
+  context('Blogs', () => {
+    it('The blogs section is visible', () => {
+      cy.get('#blog').should('be.visible')
+    })
+
+    it('The background color is correct', () => {
+      cy.get('#blog').should('be.visible')
+        .should('have.css', 'background-color', 'rgb(105, 90, 166)')
+    })
+
+    context('Text', () => {
+      it('The text is visible', () => {
+        cy.xpath('/html/body/section[8]/div/div/div[1]/h2').should('be.visible')
+      })
+
+      it('The sub text is visible', () => {
+        cy.xpath('/html/body/section[8]/div/div/div[1]/p').should('be.visible')
+      })
+
+      it('The text has the correct background color', () => {
+        cy.xpath('/html/body/section[8]/div/div/div[1]/h2').should('be.visible')
+          .should('have.css', 'color', 'rgb(255, 255, 255)')
+        cy.xpath('/html/body/section[8]/div/div/div[1]/p').should('be.visible')
+          .should('have.css', 'color', 'rgb(248, 249, 250)')
+      })
+
+      it('The text is correct', () => {
+        cy.xpath('/html/body/section[8]/div/div/div[1]/h2').should('be.visible')
+          .should('have.text', 'Latest Blogs')
+        cy.xpath('/html/body/section[8]/div/div/div[1]/p').should('be.visible')
+          .should('have.text', 'Want to read more about what I write?')
+      })
+    })
+
+    context('Button', () => {
+      it('The button is visible', () => {
+        cy.xpath('/html/body/section[8]/div/div/div[2]/button').should('be.visible')
+      })
+
+      it('The button has the correct background color', () => {
+        cy.xpath('/html/body/section[8]/div/div/div[2]/button').should('be.visible')
+          .should('have.css', 'background-color', 'rgb(248, 249, 250)')
+      })
+
+      it('The button has the correct text', () => {
+        cy.xpath('/html/body/section[8]/div/div/div[2]/button').should('be.visible')
+          .contains('Read More')
+      })
+
+      it('The button is clickable', () => {
+        cy.xpath('/html/body/section[8]/div/div/div[2]/button').should('be.visible').click()
+      })
+
+      // it('The button when clicked opens the respective medium link', () => {
+      //   cy.xpath('/html/body/section[8]/div/div/div[2]/button').should('be.visible')// Replace with your actual button selector
+      //     .should('have.attr', 'href', 'https://medium.com/@hammad.rashid_73904') // Replace with the expected URL
+      //     .then((button) => {
+      //       // Simulate the click on the button
+      //       cy.wrap(button).click();
+
+      //       // Verify if the new URL is correct
+      //       cy.url().should('eq', 'https://medium.com/@hammad.rashid_73904'); // Replace with the expected URL
+      //     });
+      // })
     })
   })
 })
