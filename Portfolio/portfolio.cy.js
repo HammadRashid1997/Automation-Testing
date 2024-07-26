@@ -582,5 +582,142 @@ describe('Personal Portfolio', () => {
       //     });
       // })
     })
+
+    // Contact Section
+    context('Contact', () => {
+      it('The section is visible', () => {
+        cy.xpath('//*[@id="contact"]').should('be.visible')
+      })
+
+      it('The background color is correct', () => {
+        cy.get('#contact').should('be.visible')
+        .should('have.css', 'background-color', 'rgba(0, 0, 0, 0)')
+      })
+
+      context('Text', () => {
+        context('Title text', () => {
+          it('The text is visible', () => {
+            cy.xpath('/html/body/section[9]/div/h6').should('be.visible')
+          })
+
+          it('The text is correct', () => {
+            cy.xpath('/html/body/section[9]/div/h6').should('be.visible')
+            .should('have.text', 'Contact Me')
+          })
+
+          it('The text color is correct', () => {
+            cy.xpath('/html/body/section[9]/div/h6').should('be.visible')
+            .should('have.css', 'color', 'rgb(105, 90, 166)')
+          })
+        })
+
+        context('Subtext', () => {
+          it('The text is visible', () => {
+            cy.get('#contact .section-subtitle').should('be.visible')
+          })
+
+          it('The text is correct', () => {
+            cy.get('#contact .section-subtitle').should('be.visible')
+            .should('have.text', 'Reach out to Me')
+          })
+
+          it('The text color is correct', () => {
+            cy.get('#contact .section-subtitle').should('be.visible')
+            .should('have.css', 'color', 'rgb(17, 17, 17)')
+          })
+        })
+      })
+
+      context('Contact Cards', () => {
+        context('Email card', () => {
+          it('The card is visible', () => {
+            cy.xpath('/html/body/section[9]/div/div/div[1]/div')
+            .should('be.visible')
+          })
+
+          it('The card has the correct background color', () => {
+            cy.xpath('/html/body/section[9]/div/div/div[1]/div/div[2]').should('be.visible')
+            .should('have.css', 'background-color', 'rgb(255, 255, 255)')
+          })
+
+          it('The border color is correct', () => {
+            cy.xpath('/html/body/section[9]/div/div/div[1]/div/div[2]').should('be.visible')
+            .should('have.css', 'border', '1.6px solid rgb(105, 90, 166)')
+          })
+
+          context('Mail icon', () => {
+            it('The mail icon is visible', () => {
+              cy.xpath('/html/body/section[9]/div/div/div[1]/div/div[1]/img')
+              .should('be.visible')
+            })
+          })
+
+          context('Text', () => {
+            it('The text is visible', () => {
+              cy.xpath('/html/body/section[9]/div/div/div[1]/div/div[2]/p').should('be.visible')
+              cy.xpath('/html/body/section[9]/div/div/div[1]/div/div[2]/h6/a').should('be.visible')
+            })
+
+            it('The text is correct', () => {
+              cy.xpath('/html/body/section[9]/div/div/div[1]/div/div[2]/p').should('be.visible')
+              .contains('Reach out to me on my email address.')
+              cy.xpath('/html/body/section[9]/div/div/div[1]/div/div[2]/h6/a').should('be.visible')
+              .contains('hammadrashid2001@gmail.com')
+            })
+
+            it('The text has the correct color', () => {
+              cy.xpath('/html/body/section[9]/div/div/div[1]/div/div[2]/p').should('be.visible')
+              .should('have.css', 'color', 'rgb(17, 17, 17)')
+              cy.xpath('/html/body/section[9]/div/div/div[1]/div/div[2]/h6/a').should('be.visible')
+              .should('have.css', 'color', 'rgb(105, 90, 166)')
+            })
+          })
+        })
+
+        context('Phone card', () => {
+          it('The card is visible', () => {
+            cy.xpath('/html/body/section[9]/div/div/div[2]/div').should('be.visible')
+          })
+
+          it('The card has the correct background color', () => {
+            cy.xpath('/html/body/section[9]/div/div/div[2]/div').should('be.visible')
+            .should('have.css', 'background-color', 'rgba(0, 0, 0, 0)')
+          })
+
+          it('The border color is correct', () => {
+            cy.xpath('/html/body/section[9]/div/div/div[2]/div').should('be.visible')
+            .should('have.css', 'border', '0px none rgb(33, 37, 41)')
+          })
+
+          context('Phone icon', () => {
+            it('The phone icon is visible', () => {
+              cy.xpath('/html/body/section[9]/div/div/div[2]/div/div[1]/img')
+              .should('be.visible')
+            })
+          })
+
+          context('Text', () => {
+            it('The text is visible', () => {
+              cy.xpath('/html/body/section[9]/div/div/div[2]/div/div[2]/p').should('be.visible')
+              cy.xpath('/html/body/section[9]/div/div/div[2]/div/div[2]/h6/a').should('be.visible')
+            })
+
+            it('The text is correct', () => {
+              cy.xpath('/html/body/section[9]/div/div/div[2]/div/div[2]/p').should('be.visible')
+              .contains('You can contact me on my cell number as well.')
+              cy.xpath('/html/body/section[9]/div/div/div[2]/div/div[2]/h6/a').should('be.visible')
+              .contains('+92 304-9679489')
+            })
+
+            it('The text has the correct color', () => {
+              cy.xpath('/html/body/section[9]/div/div/div[2]/div/div[2]/p').should('be.visible')
+              .should('have.css', 'color', 'rgb(17, 17, 17)')
+              cy.xpath('/html/body/section[9]/div/div/div[2]/div/div[2]/h6/a').should('be.visible')
+              .should('have.css', 'color', 'rgb(105, 90, 166)')
+            })
+          })
+        })
+      })
+    })
   })
 })
