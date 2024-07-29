@@ -718,6 +718,17 @@ describe('Personal Portfolio', () => {
           })
         })
       })
+
+      context('Scroll Button', () => {
+        it('The button is visible', () => {
+          cy.xpath('//*[@id="scrollBtn"]').scrollIntoView().should('be.visible')
+        })
+
+        it('The button is clickable', () => { 
+          cy.xpath('//*[@id="scrollBtn"]').scrollIntoView().should('be.visible')
+          .click()
+        })
+      })
     })
   })
 })
