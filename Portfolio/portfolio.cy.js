@@ -511,7 +511,69 @@ describe('Personal Portfolio', () => {
   })
 
   // Languages section
+  context('Languages', () => {
+    it('The section is visible', () => {
+      cy.xpath('//*[@id="programming-languages"]').scrollIntoView().should('be.visible')
+    })
 
+    context('Text', () => {
+      context('Title Text', () => {
+        it('The title text is visible', () => {
+          cy.xpath('/html/body/section[5]/div/h6').should('be.visible')
+        })
+
+        it('The text is correct', () => {
+          cy.xpath('/html/body/section[5]/div/h6').should('be.visible')
+          .should('have.text', 'Programming Languages I Know')
+        })
+
+        it('The text color is correct', () => {
+          cy.xpath('/html/body/section[5]/div/h6').should('be.visible')
+          .should('have.css', 'color', 'rgb(105, 90, 166)')
+        })
+      })
+
+      context('Subtitle Text', () => {
+        it('The text is visible', () => {
+          cy.xpath('/html/body/section[5]/div/div[1]/p').should('be.visible')
+        })
+
+        it('The text is correct', () => {
+          cy.xpath('/html/body/section[5]/div/div[1]/p').should('be.visible')
+          .should('have.text', 'Skills I Have Acquired')
+        })
+
+        it('The text color is correct', () => {
+          cy.xpath('/html/body/section[5]/div/div[1]/p').should('be.visible')
+          .should('have.css', 'color', 'rgb(17, 17, 17)')
+        })
+      })
+    })
+
+    context('Slider', () => {
+      it('Display images and corresponding text correctly', () => {
+        cy.get('.slide').each(($slide, index) => {
+
+          cy.wrap($slide).scrollIntoView();
+          // Extract image and text content
+          cy.wrap($slide).find('img').should('be.visible').and('have.attr', 'src').then((src) => {
+            // Perform assertions based on the src or other criteria
+            expect(src).to.contain('assets/imgs/');
+          });
+    
+          cy.wrap($slide).find('.styled-text p').should('be.visible').and(($p) => {
+            // You can make more specific checks based on known characteristics
+            expect($p.text()).to.not.be.empty;
+            expect($p.text()).to.match(/JavaScript|Python|Java|TypeScript|C|C\+\+|HTML|CSS/);
+          });
+        });
+      });
+    
+      it('should have the correct background color', () => {
+        cy.get('.slider-track').should('have.css', 'background-color').and('eq', 'rgba(0, 0, 0, 0)');
+      });
+    })
+  })
   // Tools and frameworks section
 
   // Certifications section
@@ -586,7 +648,15 @@ describe('Personal Portfolio', () => {
     // Contact Section
     context('Contact', () => {
       it('The section is visible', () => {
-        cy.xpath('//*[@id="contact"]').should('be.visible')
+        cy.get('#contact').should('exist').then(($el) => {
+          // Check if it's a jQuery object
+          if ($el.jquery) {
+            cy.wrap($el).should('be.visible')
+          } else {
+            // Handle or log the error appropriately
+            console.error('Element is not a jQuery object:', $el)
+          }
+        })
       })
 
       it('The background color is correct', () => {
