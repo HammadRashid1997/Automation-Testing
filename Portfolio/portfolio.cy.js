@@ -615,6 +615,188 @@ describe('Personal Portfolio', () => {
         .should('have.css', 'color', 'rgb(17, 17, 17)')
       })
     })
+
+    context('Tools and Frameworks', () => {
+      context('Tool 1', () => {
+        it('The tool is visible',() => {
+          cy.xpath('/html/body/section[6]/div/div[2]/div[1]').should('be.visible')
+        })
+
+        it('The text is visible', () => {
+          cy.xpath('/html/body/section[6]/div/div[2]/div[1]/div/div/h6').should('be.visible')
+          .should('have.text', 'Cypress').should('have.css', 'color', 'rgb(51, 51, 51)')
+        })
+
+        it('The logo is visible', () => {
+          cy.xpath('/html/body/section[6]/div/div[2]/div[1]/div/div/img').should('be.visible')
+        })
+      })
+
+      context('Tool 2', () => {
+        it('The tool is visible',() => {
+          cy.xpath('/html/body/section[6]/div/div[2]/div[2]').should('be.visible')
+        })
+
+        it('The text is visible', () => {
+          cy.xpath('/html/body/section[6]/div/div[2]/div[2]/div/div/h6').should('be.visible')
+          .should('have.text', 'Selenium').should('have.css', 'color', 'rgb(51, 51, 51)')
+        })
+
+        it('The logo is visible', () => {
+          cy.xpath('/html/body/section[6]/div/div[2]/div[2]/div/div/img').should('be.visible')
+        })
+      })
+
+      context('Tool 3', () => {
+        it('The tool is visible',() => {
+          cy.xpath('/html/body/section[6]/div/div[2]/div[3]').should('be.visible')
+        })
+
+        it('The text is visible', () => {
+          cy.xpath('/html/body/section[6]/div/div[2]/div[3]/div/div/h6').should('be.visible')
+          .should('have.text', 'TestCafe').should('have.css', 'color', 'rgb(51, 51, 51)')
+        })
+
+        it('The logo is visible', () => {
+          cy.xpath('/html/body/section[6]/div/div[2]/div[3]/div/div/img').should('be.visible')
+        })
+      })
+
+      context('Tool 4', () => {
+        it('The tool is visible',() => {
+          cy.xpath('/html/body/section[6]/div/div[2]/div[4]').should('be.visible')
+        })
+
+        it('The text is visible', () => {
+          cy.xpath('/html/body/section[6]/div/div[2]/div[4]/div/div/h6').should('be.visible')
+          .should('have.text', 'Cucumber').should('have.css', 'color', 'rgb(51, 51, 51)')
+        })
+
+        it('The logo is visible', () => {
+          cy.xpath('/html/body/section[6]/div/div[2]/div[4]/div/div/img').should('be.visible')
+        })
+      })
+
+      context('Tool 5', () => {
+        it('The tool is visible',() => {
+          cy.xpath('/html/body/section[6]/div/div[3]/div[1]/div/div').should('be.visible')
+        })
+
+        it('The text is visible', () => {
+          cy.xpath('/html/body/section[6]/div/div[3]/div[1]/div/div/h6').should('be.visible')
+          .should('have.text', 'Nightwatch').should('have.css', 'color', 'rgb(51, 51, 51)')
+        })
+
+        it('The logo is visible', () => {
+          cy.xpath('/html/body/section[6]/div/div[3]/div[1]/div/div/img').should('be.visible')
+        })
+      })
+
+      context('Tool 6', () => {
+        it('The tool is visible',() => {
+          cy.xpath('/html/body/section[6]/div/div[3]/div[2]/div/div').should('be.visible')
+        })
+
+        it('The text is visible', () => {
+          cy.xpath('/html/body/section[6]/div/div[3]/div[2]/div/div/h6').should('be.visible')
+          .should('have.text', 'Playwright').should('have.css', 'color', 'rgb(51, 51, 51)')
+        })
+
+        it('The logo is visible', () => {
+          cy.xpath('/html/body/section[6]/div/div[3]/div[2]/div/div/img').should('be.visible')
+        })
+      })
+
+      context('Tool 7', () => {
+        it('The tool is visible',() => {
+          cy.xpath('/html/body/section[6]/div/div[3]/div[3]/div/div').should('be.visible')
+        })
+
+        it('The text is visible', () => {
+          cy.xpath('/html/body/section[6]/div/div[3]/div[3]/div/div/h6').should('be.visible')
+          .should('have.text', 'JUnit').should('have.css', 'color', 'rgb(51, 51, 51)')
+        })
+
+        it('The logo is visible', () => {
+          cy.xpath('/html/body/section[6]/div/div[3]/div[3]/div/div/img').should('be.visible')
+        })
+      })
+
+      context('Tool 8', () => {
+        it('The tool is visible',() => {
+          cy.xpath('/html/body/section[6]/div/div[3]/div[4]/div/div').should('be.visible')
+        })
+
+        it('The text is visible', () => {
+          cy.xpath('/html/body/section[6]/div/div[3]/div[4]/div/div/h6').should('be.visible')
+          .should('have.text', 'PyTest').should('have.css', 'color', 'rgb(51, 51, 51)')
+        })
+
+        it('The logo is visible', () => {
+          cy.xpath('/html/body/section[6]/div/div[3]/div[4]/div/div/img').should('be.visible')
+        })
+      })
+
+      context('Tool 9', () => {
+        it('The tool is visible',() => {
+          cy.xpath('/html/body/section[6]/div/div[4]/div[1]/div/div').should('be.visible')
+        })
+
+        it('The text is visible', () => {
+          cy.xpath('/html/body/section[6]/div/div[4]/div[1]/div/div/h6').should('be.visible')
+          .should('have.text', 'EsLint').should('have.css', 'color', 'rgb(51, 51, 51)')
+        })
+
+        it('The logo is visible', () => {
+          cy.xpath('/html/body/section[6]/div/div[4]/div[1]/div/div/img').should('be.visible')
+        })
+      })
+
+      context('Tool 10', () => {
+        it('The tool is visible',() => {
+          cy.xpath('/html/body/section[6]/div/div[4]/div[2]/div/div').should('be.visible')
+        })
+
+        it('The text is visible', () => {
+          cy.xpath('/html/body/section[6]/div/div[4]/div[2]/div/div/h6').should('be.visible')
+          .should('have.text', 'Prettier').should('have.css', 'color', 'rgb(51, 51, 51)')
+        })
+
+        it('The logo is visible', () => {
+          cy.xpath('/html/body/section[6]/div/div[4]/div[2]/div/div/img').should('be.visible')
+        })
+      })
+
+      context('Tool 11', () => {
+        it('The tool is visible',() => {
+          cy.xpath('/html/body/section[6]/div/div[4]/div[3]/div/div').should('be.visible')
+        })
+
+        it('The text is visible', () => {
+          cy.xpath('/html/body/section[6]/div/div[4]/div[3]/div/div/h6').should('be.visible')
+          .should('have.text', 'K6').should('have.css', 'color', 'rgb(51, 51, 51)')
+        })
+
+        it('The logo is visible', () => {
+          cy.xpath('/html/body/section[6]/div/div[4]/div[3]/div/div/img').should('be.visible')
+        })
+      })
+
+      context('Tool 12', () => {
+        it('The tool is visible',() => {
+          cy.xpath('/html/body/section[6]/div/div[4]/div[4]/div/div').should('be.visible')
+        })
+
+        it('The text is visible', () => {
+          cy.xpath('/html/body/section[6]/div/div[4]/div[4]/div/div/h6').should('be.visible')
+          .should('have.text', 'Apache JMeter').should('have.css', 'color', 'rgb(51, 51, 51)')
+        })
+
+        it('The logo is visible', () => {
+          cy.xpath('/html/body/section[6]/div/div[4]/div[4]/div/div/img').should('be.visible')
+        })
+      })
+    })
   })
 
   // Certifications section
@@ -672,18 +854,6 @@ describe('Personal Portfolio', () => {
       it('The button is clickable', () => {
         cy.xpath('/html/body/section[8]/div/div/div[2]/button').should('be.visible').click()
       })
-
-      // it('The button when clicked opens the respective medium link', () => {
-      //   cy.xpath('/html/body/section[8]/div/div/div[2]/button').should('be.visible')// Replace with your actual button selector
-      //     .should('have.attr', 'href', 'https://medium.com/@hammad.rashid_73904') // Replace with the expected URL
-      //     .then((button) => {
-      //       // Simulate the click on the button
-      //       cy.wrap(button).click();
-
-      //       // Verify if the new URL is correct
-      //       cy.url().should('eq', 'https://medium.com/@hammad.rashid_73904'); // Replace with the expected URL
-      //     });
-      // })
     })
   })
 
