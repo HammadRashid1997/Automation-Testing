@@ -800,6 +800,121 @@ describe('Personal Portfolio', () => {
   })
 
   // Certifications section
+  context('Certifications', () => {
+    it('The section is visible', () => {
+      cy.xpath('//*[@id="certifications"]').should('be.visible')
+    })
+
+    it('The section background color is correct', () => {
+      cy.get('#certifications').should('be.visible')
+        .should('have.css', 'background-color', 'rgba(0, 0, 0, 0)')
+    })
+
+    // context('Text', () => {
+    //   it('The title text is visible', () => {
+    //     cy.xpath('/html/body/section[7]/div/h6').should('be.visible')
+    //   })
+
+    //   it('The title text has the correct color', () => {
+    //     cy.xpath('/html/body/section[7]/div/h6').should('be.visible')
+    //       .should('have.text', 'Certifications')
+    //   })
+
+    //   it('The title text has the correct color', () => {
+    //     cy.xpath('/html/body/section[7]/div/h6').should('be.visible')
+    //       .should('have.css', 'color', 'rgb(105, 90, 166)')
+    //   })
+
+    //   it('The subtitle text is visible', () => {
+    //     cy.xpath('/html/body/section[7]/div/div[1]/p').should('be.visible')
+    //   })
+
+    //   it('The subtitle text has the correct color', () => {
+    //     cy.xpath('/html/body/section[7]/div/div[1]/p').should('be.visible')
+    //       .should('have.text', 'From where I have done')
+    //   })
+
+    //   it('The subtitle text has the correct color', () => {
+    //     cy.xpath('/html/body/section[7]/div/div[1]/p').should('be.visible')
+    //       .should('have.css', 'color', 'rgb(17, 17, 17)')
+    //   })
+    // })
+
+    context('Certificates', () => {
+      context('Certificate 1', () => {
+        it('The certificate is visible', () => {
+          cy.xpath('/html/body/section[7]/div/div[2]/ul/li[1]').should('be.visible')
+        })
+
+        it('The background color is correct', () => {
+          cy.xpath('/html/body/section[7]/div/div[2]/ul/li[1]').should('be.visible')
+            .should('have.css', 'background-color', 'rgb(255, 255, 255)')
+        })
+
+        it('The text is visible, correct and has the correct color', () => {
+          cy.xpath('/html/body/section[7]/div/div[2]/ul/li[1]/h2').should('be.visible')
+            .should('have.text', 'ISTQB Certified Tester Foundation Level (CTFL)')
+            .should('have.css', 'color', 'rgb(111, 66, 193)')
+
+          cy.xpath('/html/body/section[7]/div/div[2]/ul/li[1]/p')
+            .should('be.visible')
+            .invoke('text')
+            .then((text) => {
+              const normalizedText = text.replace(/\s+/g, ' ').trim();
+              expect(normalizedText).to.eq('International Software Testing Qualifications Board - Issued: June 2024');
+            })
+        })
+
+        it('The text color is correct', () => {
+          cy.xpath('/html/body/section[7]/div/div[2]/ul/li[1]/p')
+            .should('be.visible')
+            .should('have.css', 'color', 'rgb(85, 85, 85)')
+        })
+      })
+
+      context('Certificate 2', () => {
+        it('The certificate is visible', () => {
+          cy.xpath('/html/body/section[7]/div/div[2]/ul/li[2]').should('be.visible')
+        })
+
+        it('The background color is correct', () => {
+          cy.xpath('/html/body/section[7]/div/div[2]/ul/li[2]').should('be.visible')
+            .should('have.css', 'background-color', 'rgb(255, 255, 255)')
+        })
+
+        it('The text is visible, correct and has the correct color', () => {
+          cy.xpath('/html/body/section[7]/div/div[2]/ul/li[2]/h2').should('be.visible')
+            .should('have.text', 'Certified Associate in Software Testing (CAST)')
+            .should('have.css', 'color', 'rgb(111, 66, 193)')
+
+          cy.xpath('/html/body/section[7]/div/div[2]/ul/li[2]/p').should('be.visible')
+            .should('have.text', 'Great Learning Academy - Issued: April 2024')
+            .should('have.css', 'color', 'rgb(85, 85, 85)')
+        })
+      })
+
+      context('Certificate 3', () => {
+        it('The certificate is visible', () => {
+          cy.xpath('/html/body/section[7]/div/div[2]/ul/li[3]').should('be.visible')
+        })
+
+        it('The background color is correct', () => {
+          cy.xpath('/html/body/section[7]/div/div[2]/ul/li[3]').should('be.visible')
+            .should('have.css', 'background-color', 'rgb(255, 255, 255)')
+        })
+
+        it('The text is visible, correct and has the correct color', () => {
+          cy.xpath('/html/body/section[7]/div/div[2]/ul/li[3]/h2').should('be.visible')
+            .should('have.text', 'Certified Associate in Software Quality (CASQ)')
+            .should('have.css', 'color', 'rgb(111, 66, 193)')
+
+          cy.xpath('/html/body/section[7]/div/div[2]/ul/li[3]/p').should('be.visible')
+            .should('have.text', 'Great Learning Academy - Issued: April 2024')
+            .should('have.css', 'color', 'rgb(85, 85, 85)')
+        })
+      })
+    })
+  })
 
   // Blogs section
   context('Blogs', () => {
