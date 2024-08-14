@@ -2,10 +2,8 @@ describe('Personal Portfolio', () => {
   beforeEach(() => {
     cy.visit('https://hammadrashid1997.github.io/Portfolio/')
   })
-
-  it('The home page opens up', () => {
-
-  })
+  
+  it('The home page opens up', () => {})
 
   // Navbar
   context('Navbar', () => {
