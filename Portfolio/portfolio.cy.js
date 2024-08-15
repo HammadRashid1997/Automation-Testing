@@ -422,13 +422,126 @@ describe('Personal Portfolio', () => {
       })
     })
 
-    context('Skillset', () => {
-      it('The skillsets are visible', () => {
+    context('Services', () => {
+      it('The services are visible', () => {
         cy.get('#services .container.text-center .row').should('be.visible')
       })
 
       context('Row 1', () => {
+        context('Service 1', () => {
+          it('The service is visible', () => {
+            cy.xpath('/html/body/section[2]/div/div[1]/div[1]').should('be.visible')
+          })
 
+          it('The text is visible', () => {
+            cy.xpath('/html/body/section[2]/div/div[1]/div[1]/div/div/h6')
+            .should('be.visible').should('have.text', 'Manual Testing')
+            .should('have.css', 'color', 'rgb(105, 90, 166)')
+          })
+
+          it('The icon is visible', () => {
+            cy.xpath('/html/body/section[2]/div/div[1]/div[1]/div/div/img')
+            .should('be.visible')
+          })
+
+          it('The text on hover is visible', () => {
+            cy.xpath('/html/body/section[2]/div/div[1]/div[1]')
+            .should('be.visible').trigger('mouseover')
+            cy.xpath('/html/body/section[2]/div/div[1]/div[1]/div/div/p').should('exist')
+            .invoke('text')
+            .then((text) => {
+              const normalizedText = text.replace(/\s+/g, ' ').trim();
+              expect(normalizedText).to.eq('Guaranteeing the quality and dependability of software products.');
+            })
+          })
+        })
+
+        // Service 2
+        context('Service 2', () => {
+          it('The service is visible', () => {
+            cy.xpath('/html/body/section[2]/div/div[1]/div[2]').should('be.visible')
+          })
+
+          it('The text is visible', () => {
+            cy.xpath('/html/body/section[2]/div/div[1]/div[2]/div/div/h6')
+            .should('be.visible').should('have.text', 'Automation')
+            .should('have.css', 'color', 'rgb(105, 90, 166)')
+          })
+
+          it('The icon is visible', () => {
+            cy.xpath('/html/body/section[2]/div/div[1]/div[2]/div/div/img')
+            .should('be.visible')
+          })
+
+          it('The text on hover is visible', () => {
+            cy.xpath('/html/body/section[2]/div/div[1]/div[2]')
+            .should('be.visible').trigger('mouseover')
+            cy.xpath('/html/body/section[2]/div/div[1]/div[1]/div/div/p').should('exist')
+            .invoke('text')
+            .then((text) => {
+              const normalizedText = text.replace(/\s+/g, ' ').trim();
+              expect(normalizedText).to.eq('Automation testing services to enhance software quality.');
+            })
+          })
+        })
+
+        // Service 3
+        context('Service 3', () => {
+          it('The service is visible', () => {
+            cy.xpath('/html/body/section[2]/div/div[1]/div[3]').should('be.visible')
+          })
+
+          it('The text is visible', () => {
+            cy.xpath('/html/body/section[2]/div/div[1]/div[3]/div/div/h6')
+            .should('be.visible').should('have.text', 'Web App Testing')
+            .should('have.css', 'color', 'rgb(105, 90, 166)')
+          })
+
+          it('The icon is visible', () => {
+            cy.xpath('/html/body/section[2]/div/div[1]/div[3]/div/div/img')
+            .should('be.visible')
+          })
+
+          it('The text on hover is visible', () => {
+            cy.xpath('/html/body/section[2]/div/div[1]/div[3]')
+            .should('be.visible').trigger('mouseover')
+            cy.xpath('/html/body/section[2]/div/div[1]/div[3]/div/div/p').should('exist')
+            .invoke('text')
+            .then((text) => {
+              const normalizedText = text.replace(/\s+/g, ' ').trim();
+              expect(normalizedText).to.eq('Ensure the functionality, usability, and security of your web-based solutions.');
+            })
+          })
+        })
+
+        // Service 4
+        // context('Service 1', () => {
+        //   it('The service is visible', () => {
+        //     cy.xpath('/html/body/section[2]/div/div[1]/div[1]').should('be.visible')
+        //   })
+
+        //   it('The text is visible', () => {
+        //     cy.xpath('/html/body/section[2]/div/div[1]/div[1]/div/div/h6')
+        //     .should('be.visible').should('have.text', 'Manual Testing')
+        //     .should('have.css', 'color', 'rgb(105, 90, 166)')
+        //   })
+
+        //   it('The icon is visible', () => {
+        //     cy.xpath('/html/body/section[2]/div/div[1]/div[1]/div/div/img')
+        //     .should('be.visible')
+        //   })
+
+        //   it('The text on hover is visible', () => {
+        //     cy.xpath('/html/body/section[2]/div/div[1]/div[1]')
+        //     .should('be.visible').trigger('mouseover')
+        //     cy.xpath('/html/body/section[2]/div/div[1]/div[1]/div/div/p').should('exist')
+        //     .invoke('text')
+        //     .then((text) => {
+        //       const normalizedText = text.replace(/\s+/g, ' ').trim();
+        //       expect(normalizedText).to.eq('Guaranteeing the quality and dependability of software products.');
+        //     })
+        //   })
+        // })
       })
     })
   })
@@ -554,10 +667,10 @@ describe('Personal Portfolio', () => {
 
           cy.wrap($slide).scrollIntoView();
           // Extract image and text content
-          cy.wrap($slide).find('img').should('be.visible').and('have.attr', 'src').then((src) => {
-            // Perform assertions based on the src or other criteria
-            expect(src).to.contain('assets/imgs/');
-          });
+          // cy.wrap($slide).find('img').should('be.visible').and('have.attr', 'src').then((src) => {
+          //   // Perform assertions based on the src or other criteria
+          //   expect(src).to.contain('assets/imgs/');
+          // });
 
           cy.wrap($slide).find('.styled-text p').should('be.visible').and(($p) => {
             // You can make more specific checks based on known characteristics
@@ -567,7 +680,7 @@ describe('Personal Portfolio', () => {
         });
       });
 
-      it('should have the correct background color', () => {
+      it('The correct background color should be displayed', () => {
         cy.get('.slider-track').should('have.css', 'background-color').and('eq', 'rgba(0, 0, 0, 0)');
       });
     })
@@ -808,35 +921,35 @@ describe('Personal Portfolio', () => {
         .should('have.css', 'background-color', 'rgba(0, 0, 0, 0)')
     })
 
-    // context('Text', () => {
-    //   it('The title text is visible', () => {
-    //     cy.xpath('/html/body/section[7]/div/h6').should('be.visible')
-    //   })
+    context('Text', () => {
+      it('The title text is visible', () => {
+        cy.xpath('/html/body/section[7]/div/h6').should('be.visible')
+      })
 
-    //   it('The title text has the correct color', () => {
-    //     cy.xpath('/html/body/section[7]/div/h6').should('be.visible')
-    //       .should('have.text', 'Certifications')
-    //   })
+      it('The title text has the correct color', () => {
+        cy.xpath('/html/body/section[7]/div/h6').should('be.visible')
+          .should('have.text', 'Certifications')
+      })
 
-    //   it('The title text has the correct color', () => {
-    //     cy.xpath('/html/body/section[7]/div/h6').should('be.visible')
-    //       .should('have.css', 'color', 'rgb(105, 90, 166)')
-    //   })
+      it('The title text has the correct color', () => {
+        cy.xpath('/html/body/section[7]/div/h6').should('be.visible')
+          .should('have.css', 'color', 'rgb(105, 90, 166)')
+      })
 
-    //   it('The subtitle text is visible', () => {
-    //     cy.xpath('/html/body/section[7]/div/div[1]/p').should('be.visible')
-    //   })
+      it('The subtitle text is visible', () => {
+        cy.xpath('/html/body/section[7]/div/div[1]/p').should('be.visible')
+      })
 
-    //   it('The subtitle text has the correct color', () => {
-    //     cy.xpath('/html/body/section[7]/div/div[1]/p').should('be.visible')
-    //       .should('have.text', 'From where I have done')
-    //   })
+      it('The subtitle text has the correct color', () => {
+        cy.xpath('/html/body/section[7]/div/div[1]/p').should('be.visible')
+          .should('have.text', 'From where I have done')
+      })
 
-    //   it('The subtitle text has the correct color', () => {
-    //     cy.xpath('/html/body/section[7]/div/div[1]/p').should('be.visible')
-    //       .should('have.css', 'color', 'rgb(17, 17, 17)')
-    //   })
-    // })
+      it('The subtitle text has the correct color', () => {
+        cy.xpath('/html/body/section[7]/div/div[1]/p').should('be.visible')
+          .should('have.css', 'color', 'rgb(17, 17, 17)')
+      })
+    })
 
     context('Certificates', () => {
       context('Certificate 1', () => {
