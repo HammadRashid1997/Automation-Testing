@@ -476,7 +476,7 @@ describe('Personal Portfolio', () => {
           it('The text on hover is visible', () => {
             cy.xpath('/html/body/section[2]/div/div[1]/div[2]')
             .should('be.visible').trigger('mouseover')
-            cy.xpath('/html/body/section[2]/div/div[1]/div[1]/div/div/p').should('exist')
+            cy.xpath('/html/body/section[2]/div/div[1]/div[2]/div/div/p').should('exist')
             .invoke('text')
             .then((text) => {
               const normalizedText = text.replace(/\s+/g, ' ').trim();
@@ -515,33 +515,150 @@ describe('Personal Portfolio', () => {
         })
 
         // Service 4
-        // context('Service 1', () => {
-        //   it('The service is visible', () => {
-        //     cy.xpath('/html/body/section[2]/div/div[1]/div[1]').should('be.visible')
-        //   })
+        context('Service 4', () => {
+          it('The service is visible', () => {
+            cy.xpath('/html/body/section[2]/div/div[1]/div[4]').should('be.visible')
+          })
 
-        //   it('The text is visible', () => {
-        //     cy.xpath('/html/body/section[2]/div/div[1]/div[1]/div/div/h6')
-        //     .should('be.visible').should('have.text', 'Manual Testing')
-        //     .should('have.css', 'color', 'rgb(105, 90, 166)')
-        //   })
+          it('The text is visible', () => {
+            cy.xpath('/html/body/section[2]/div/div[1]/div[4]/div/div/h6')
+            .should('be.visible').should('have.text', 'Mobile App Testing')
+            .should('have.css', 'color', 'rgb(105, 90, 166)')
+          })
 
-        //   it('The icon is visible', () => {
-        //     cy.xpath('/html/body/section[2]/div/div[1]/div[1]/div/div/img')
-        //     .should('be.visible')
-        //   })
+          it('The icon is visible', () => {
+            cy.xpath('/html/body/section[2]/div/div[1]/div[4]/div/div/img')
+            .should('be.visible')
+          })
 
-        //   it('The text on hover is visible', () => {
-        //     cy.xpath('/html/body/section[2]/div/div[1]/div[1]')
-        //     .should('be.visible').trigger('mouseover')
-        //     cy.xpath('/html/body/section[2]/div/div[1]/div[1]/div/div/p').should('exist')
-        //     .invoke('text')
-        //     .then((text) => {
-        //       const normalizedText = text.replace(/\s+/g, ' ').trim();
-        //       expect(normalizedText).to.eq('Guaranteeing the quality and dependability of software products.');
-        //     })
-        //   })
-        // })
+          it('The text on hover is visible', () => {
+            cy.xpath('/html/body/section[2]/div/div[1]/div[4]')
+            .should('be.visible').trigger('mouseover')
+            cy.xpath('/html/body/section[2]/div/div[1]/div[4]/div/div/p').should('exist')
+            .invoke('text')
+            .then((text) => {
+              const normalizedText = text.replace(/\s+/g, ' ').trim();
+              expect(normalizedText).to.eq('Ensure the functionality, usability, and performance.');
+            })
+          })
+        })
+      })
+
+      context('Row 2', () => {
+        context('Service 5', () => {
+          it('The service is visible', () => {
+            cy.xpath('/html/body/section[2]/div/div[2]/div[1]').should('be.visible')
+          })
+
+          it('The text is visible', () => {
+            cy.xpath('/html/body/section[2]/div/div[2]/div[1]/div/div/h6')
+            .should('be.visible').should('have.text', 'Functional Testing')
+            .should('have.css', 'color', 'rgb(105, 90, 166)')
+          })
+
+          it('The icon is visible', () => {
+            cy.xpath('/html/body/section[2]/div/div[2]/div[1]/div/div/img')
+            .should('be.visible')
+          })
+
+          it('The text on hover is visible', () => {
+            cy.xpath('/html/body/section[2]/div/div[2]/div[1]')
+            .should('be.visible').trigger('mouseover')
+            cy.xpath('/html/body/section[2]/div/div[2]/div[1]/div/div/p').should('exist')
+            .invoke('text')
+            .then((text) => {
+              const normalizedText = text.replace(/\s+/g, ' ').trim();
+              expect(normalizedText).to.eq('Product operates as intended, adhering closely to user requirements.');
+            })
+          })
+        })
+
+        // Service 6
+        context('Service 6', () => {
+          it('The service is visible', () => {
+            cy.xpath('/html/body/section[2]/div/div[2]/div[2]').should('be.visible')
+          })
+
+          it('The text is visible', () => {
+            cy.xpath('/html/body/section[2]/div/div[2]/div[2]/div/div/h6')
+            .should('be.visible').should('have.text', 'Regression')
+            .should('have.css', 'color', 'rgb(105, 90, 166)')
+          })
+
+          it('The icon is visible', () => {
+            cy.xpath('/html/body/section[2]/div/div[2]/div[2]/div/div/img')
+            .should('be.visible')
+          })
+
+          it('The text on hover is visible', () => {
+            cy.xpath('/html/body/section[2]/div/div[2]/div[2]')
+            .should('be.visible').trigger('mouseover')
+            cy.xpath('/html/body/section[2]/div/div[2]/div[2]/div/div/p').should('exist')
+            .invoke('text')
+            .then((text) => {
+              const normalizedText = text.replace(/\s+/g, ' ').trim();
+              expect(normalizedText).to.eq('Safeguarding against unintended code changes by systematically retesting existing functionalities.');
+            })
+          })
+        })
+
+        // Service 7
+        context('Service 7', () => {
+          it('The service is visible', () => {
+            cy.xpath('/html/body/section[2]/div/div[2]/div[3]').should('be.visible')
+          })
+
+          it('The text is visible', () => {
+            cy.xpath('/html/body/section[2]/div/div[2]/div[3]/div/div/h6')
+            .should('be.visible').should('have.text', 'Usability Testing')
+            .should('have.css', 'color', 'rgb(105, 90, 166)')
+          })
+
+          it('The icon is visible', () => {
+            cy.xpath('/html/body/section[2]/div/div[2]/div[3]/div/div/img')
+            .should('be.visible')
+          })
+
+          it('The text on hover is visible', () => {
+            cy.xpath('/html/body/section[2]/div/div[2]/div[3]')
+            .should('be.visible').trigger('mouseover')
+            cy.xpath('/html/body/section[2]/div/div[2]/div[2]/div/div/p').should('exist')
+            .invoke('text')
+            .then((text) => {
+              const normalizedText = text.replace(/\s+/g, ' ').trim();
+              expect(normalizedText).to.eq('Evaluating the ease of use and overall user experience of your software interface.');
+            })
+          })
+        })
+
+        // Service 8
+        context('Service 8', () => {
+          it('The service is visible', () => {
+            cy.xpath('/html/body/section[2]/div/div[2]/div[4]').should('be.visible')
+          })
+
+          it('The text is visible', () => {
+            cy.xpath('/html/body/section[2]/div/div[2]/div[4]/div/div/h6')
+            .should('be.visible').should('have.text', 'Performance Testing')
+            .should('have.css', 'color', 'rgb(105, 90, 166)')
+          })
+
+          it('The icon is visible', () => {
+            cy.xpath('/html/body/section[2]/div/div[2]/div[4]/div/div/img')
+            .should('be.visible')
+          })
+
+          it('The text on hover is visible', () => {
+            cy.xpath('/html/body/section[2]/div/div[2]/div[4]')
+            .should('be.visible').trigger('mouseover')
+            cy.xpath('/html/body/section[2]/div/div[2]/div[4]/div/div/p').should('exist')
+            .invoke('text')
+            .then((text) => {
+              const normalizedText = text.replace(/\s+/g, ' ').trim();
+              expect(normalizedText).to.eq('Responsiveness, scalability, and stability of software.');
+            })
+          })
+        })
       })
     })
   })
