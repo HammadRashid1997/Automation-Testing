@@ -1,5 +1,4 @@
-# Automation-Testing🧪
-
+# Automation-Testing
 
 ## Table of Contents
 - [Introduction](#introduction)
