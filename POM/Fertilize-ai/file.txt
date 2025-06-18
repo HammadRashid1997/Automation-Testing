@@ -1,0 +1,1 @@
+This contains code for e2e testing using POM
