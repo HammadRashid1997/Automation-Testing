@@ -59,7 +59,27 @@ class SignupPage {
     }
 
     getSignupButton() {
-        return cy.get(".button-4.registration w-button").should("Be.visible")
+        return cy.get(".button-4.registration.w-button").should("be.visible")
+    }
+
+    getSocialLoginButtons() {
+        cy.get(".social-box").should("be.visible");
+    }
+
+    getSocialLoginGoogleButton() {
+        cy.get(".social-login.w-inline-block")
+        .should("be.visible")
+        .should("have.css", "background-color", "rgba(0, 0, 0, 0)")
+        .should("have.text", "GoogleFacebook")
+        .should("have.css", "color", "rgb(0, 0, 238)");
+    }
+
+    getSocialLoginFacebookButton() {
+        cy.get(".social-login.facebook.w-inline-block")
+        .should("be.visible")
+        .should("have.css", "background-color", "rgb(59, 89, 152)")
+        .should("have.text", "Facebook")
+        .should("have.css", "color", "rgb(0, 0, 238)");
     }
 
     // Assertions
