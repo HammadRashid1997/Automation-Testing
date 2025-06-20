@@ -33,16 +33,11 @@ describe("Fertilize Ai Signup Page Tests", () => {
         });
 
         it("Fill in the signup form and submit the form", () => {
-            const userData = {
-                firstName: 'John',
-                lastName: 'Doe',
-                phone: '03001234567',
-                email: `johndoe@yahoo.com`,
-                password: 'Secure@123'
-            };
-            SignupPage.fillInTheSignUpForm(userData);
-            SignupPage.verifySignupButton();
-            SignupPage.verifySuccessMessage();
+            cy.fixture('signup').then((userData) => {
+                SignupPage.fillInTheSignUpForm(userData);
+                SignupPage.verifySignupButton();
+                SignupPage.verifySuccessMessage();
+            });
         })
     })
 
