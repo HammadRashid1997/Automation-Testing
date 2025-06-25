@@ -82,7 +82,7 @@ You can view the E2E Cypress code here. [Husky E2E Cypress Code](https://github.
 
 ### Fertilize Ai
 
-You can view the E2E Cypress code here. [E2E Cypress Code](https://github.com/HammadRashid1997/Automation-Testing/blob/main/Fertilize-Ai)
+The website has been automated using Cypress and JavaScript. The design pattern that has been used is Page Object Model, more commonly known as POM. You can view the E2E Cypress code here. [E2E Cypress Code](https://github.com/HammadRashid1997/Automation-Testing/blob/main/Fertilize-Ai)
 
 ## Contribute to the Repository
 Reach out to me via my email address [Email Address](mailto:hammadrashid2001@gmail.com) and we can further discuss on making this repository a better source for the people.
