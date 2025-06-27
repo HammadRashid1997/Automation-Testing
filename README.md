@@ -72,14 +72,6 @@ This section provides a comprehensive overview of the projects on which I have p
 
 ### Portfolio
 
-This project is my personal portfolio. You can view the complete webiste here. [My Portfolio](https://hammadrashid1997.github.io/Portfolio/)
-
-For viewing the E2E Cypress code, see here. [Portfolio E2E Cypress Code](https://github.com/HammadRashid1997/Automation-Testing/blob/main/Portfolio)
-
-### Husky
-
-You can view the E2E Cypress code here. [Husky E2E Cypress Code](https://github.com/HammadRashid1997/Automation-Testing/blob/main/Husky)
-
 ### Fertilize Ai
 
 The website has been automated using Cypress and JavaScript. The design pattern that has been used is Page Object Model, more commonly known as POM. You can view the E2E Cypress code here. [E2E Cypress Code](https://github.com/HammadRashid1997/Automation-Testing/blob/main/Fertilize-Ai)
