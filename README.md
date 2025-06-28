@@ -70,8 +70,6 @@ Certain tests, such as those requiring human judgment or user experience evaluat
 ## Projects
 This section provides a comprehensive overview of the projects on which I have performed automation testing using Cypress.
 
-### Portfolio
-
 ### Fertilize Ai
 
 The website has been automated using Cypress and JavaScript. The design pattern that has been used is Page Object Model, more commonly known as POM. You can view the E2E Cypress code here. [E2E Cypress Code](https://github.com/HammadRashid1997/Automation-Testing/blob/main/Fertilize-Ai)
